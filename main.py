@@ -53,7 +53,7 @@ def main():
         postTime = submission.created
         postNumComments = submission.num_comments
 	
-	fw1.write(str(i-1) + "," + str(postID) + "\t" + str(postAuthor) + "\t" + str(postTitle) + "\t" + str(postTime) + "\t" + str(postUps) + "\t" + str(postDown) + "\n")	
+	fw1.write(str(i-2) + "\t" + str(postID) + "\t" + str(postAuthor) + "\t" + str(postTitle) + "\t" + str(postTime) + "\t" + str(postUps) + "\t" + str(postDown) + "\n")	
 	
         postDic[postID] = {}
         postDic[postID]['post ID'] = postID
