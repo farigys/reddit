@@ -13,7 +13,7 @@ def main():
     i = 0
 
     filecount = 1
-    fw1 = open("/home/farig/Downloads/reddit2/post contents/postInfo.txt", "w")
+    fw1 = open("/home/farig/Downloads/reddit2/postInfo.txt", "w")
     fw1.write("postCounter\tpostId\tposter\ttitle\ttime\tups\tdowns\n")
     fw = open("/home/farig/Downloads/reddit2/post contents/file" + str(filecount) + ".txt", "w")
     postcount = 0
