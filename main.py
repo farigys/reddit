@@ -5,17 +5,19 @@ import pprint
 import csv
 import codecs
 def main():
+    root = "/Users/farig/Desktop/reddit-master/" #change this based on your system
+    #r= praw.Reddit(user_agent="", client_id="", client_secret="", username="", password="")	use this if bot1 cannot be found
     r= praw.Reddit('bot1')
 
-    output_file= open('output.csv','wb')
+    output_file= open(root + 'output.csv','wb')
     output_writer=csv.writer(output_file)
     
     i = 0
 
     filecount = 1
-    fw1 = open("postInfo.txt", "w")
+    fw1 = open(root + "postInfo.txt", "w")
     fw1.write("postCounter\tpostId\tposter\ttitle\ttime\tups\tdowns\n")
-    fw = open("post contents/file" + str(filecount) + ".txt", "w")
+    fw = open(root + "post contents/file" + str(filecount) + ".txt", "w")
     postcount = 0
     
     for submission in r.subreddit('depression').top(limit=10):
@@ -42,7 +44,7 @@ def main():
 	    postcount = 0
 	    fw.close()
 	    filecount = filecount + 1
-	    fw = open("post contents/file" + str(filecount) + ".txt", "w")
+	    fw = open(root + "post contents/file" + str(filecount) + ".txt", "w")
         postSubreddit = str(submission.subreddit)
         postTitle = str(submission.title.encode('utf8'))
         postUrl = submission.url
